@@ -9,6 +9,8 @@ import View from './Components/JS/View'
 import Notification from './Components/JS/Notification'
 import ProfileService from './Components/JS/ProfileService'
 import ProfileUser from './Components/JS/ProfileUser'
+import Addcourse from './Components/JS/Addcourse'
+import Resume from './Components/JS/Resume'
 import {Switch,Route} from 'react-router-dom'
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
      <Route exact path="/Notification"><Notification/></Route>
      <Route exact path="/ProfileService"><ProfileService/></Route>
      <Route exact path="/ProfileUser"><ProfileUser/></Route>
+     <Route exact path="/Addcourse"><Addcourse/></Route>
+     <Route exact path="/Resume"><Resume/></Route>
       </Switch>
     </div>
   );

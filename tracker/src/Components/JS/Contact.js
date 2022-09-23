@@ -16,7 +16,7 @@ function Contact() {
     <>
    <div className="contact-section" id='Contact'>
 
-<h1 data-aos="flip-left">CONTACT US</h1>
+<h1 data-aos="flip-left" style={{color:"#000"}}>CONTACT US</h1>
 <form className="contact-form" action="index.html" method="post">
   <input type="text" value={name}   onChange={(e) => setname(e.target.value)} className="contact-form-text" placeholder="Your name" data-aos="fade-right"/>
   <input type="email" value={email}   onChange={(e) => setemail(e.target.value)} className="contact-form-text" placeholder="Your email" data-aos="fade-left"/>
