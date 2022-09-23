@@ -30,6 +30,7 @@ export default function Addcourse() {
 
     return (
         <>
+        <form>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", minHeight: "100vh",padding:"20px" }}>
                 <Box
                     sx={{
@@ -69,10 +70,11 @@ export default function Addcourse() {
                     </select>
                     <div id="emailHelp" className="form-text">We'll never share your Phone with anyone else.</div>
                 </div>
-                <Button variant="contained" disableElevation onClink={getData}>
+                <Button variant="contained" disableElevation type="submit" >
                     ADD COURSE
                 </Button>
             </div>
+            </form>
         </>
 
     );
