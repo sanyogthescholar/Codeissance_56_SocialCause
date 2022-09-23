@@ -6,15 +6,22 @@ export default function Addcourse() {
      
     const [data, setData] = useState(null);
     const [name, setname] = useState('');
-    const [Description, setDescription] = useState();
+    const [Description, setDescription] = useState("");
     const [link, setlink] = useState("");
     const [type, settype] = useState("");
     
     useEffect(() => {
         async function getData() {
           const response = await fetch(
-            `http://172.168.1.6?name=${name}&description=${Description}&link=${link}&type=${type}`
-          )
+            `http://172.168.1.6?name=${name}&description=${Description}&link=${link}&type=${type}`,
+         {
+            method: "POST",
+            headers: {
+             Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+         } )
       
           console.log(response)
         }
