@@ -3,7 +3,20 @@ import { BsFillTelephonePlusFill } from 'react-icons/bs'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { NavLink } from 'react-router-dom'
 import '../CSS/CommanLogin.css'
+
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app';
+import 'firebase/compat/auth';
+import firebaseConfig from '../../firebaseconfig';
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 function CommanLogin() {
+const {
+  user,
+  signOut,
+  signInWithGoogle,
+} = this.props;
   return (
     <div className='main' style={{ marginTop: "30px", padding: "5px" }}>
       <div style={{ width: "1000px", height: "620px", backgroundColor: '#d8d6d6', paddingTop: '100px', paddingBottom: "10px", boxShadow: "1px 2px 1px gray" }} className="login">
@@ -32,8 +45,17 @@ function CommanLogin() {
             <h6 style={{ marginTop: "10px" }}> Sign Up As Customer<NavLink to='/SimpleUser'>SignUp</NavLink></h6>
           </div>
       </div>
+      {
+        user 
+          ? <p>Hello, {user.displayName}</p>
+          : <p>Please sign in.</p>
+      }
+      {
+        user
+          ? <button onClick={signOut}>Sign out</button>
+          : <button onClick={signInWithGoogle}>Sign in with Google</button>
+      }
     </div>
   )
 }
-
 export default CommanLogin

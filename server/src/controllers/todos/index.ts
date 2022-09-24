@@ -5,7 +5,9 @@ import Course from '../../models/course'
 const getCourses = async (req: Request, res: Response): Promise<void> => {
     try {
         const courses: ICourse[] = await Course.find()
-        res.status(200).json({ courses })
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({courses}));
+        //res.status(200).json({ courses })
     } catch (error) {
         throw error
     }

@@ -17,7 +17,9 @@ const course_1 = __importDefault(require("../../models/course"));
 const getCourses = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const courses = yield course_1.default.find();
-        res.status(200).json({ courses });
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ courses }));
+        //res.status(200).json({ courses })
     }
     catch (error) {
         throw error;
