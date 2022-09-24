@@ -131,6 +131,5 @@ export default function Addcourse() {
         button > ADD COURSE < /button> < /
         div > <
         /form> < / >
-
     );
 }

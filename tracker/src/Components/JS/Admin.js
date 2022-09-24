@@ -17,7 +17,7 @@ function Admin() {
         <>
             <div className='main' style={{ marginTop: "30px" }}>
                 <div className="container">
-                    <header>Service Provider</header>
+                    <header>Sign Up As Admin</header>
                     <form action="">
                         <div className="form first">
                             <div className="details personal">
@@ -65,15 +65,15 @@ function Admin() {
 
 
                             <div className="details ID">
-                                <span className="title">Business Details</span>
+                                <span className="title">Course Details</span>
                                 <div className="fields">
 
                                     <div  className="mb-3">
-                                        <label for="" style={{ display: "flex", textAlign: "center", gap: "10px" }} ><h5>Type Of Service</h5><RiCustomerService2Fill /></label>
+                                        <label for="" style={{ display: "flex", textAlign: "center", gap: "10px" }} ><h5>Type Of Course</h5><RiCustomerService2Fill /></label>
                                         <select id="country" name="country" style={{ padding: "15px", border: "0px", outline: "none", width: "250px", height: "50px", borderRadius: "3.5px" }}>
-                                            <option value="australia" style={{ fontSize: "14px" }}>Raddiwala</option>
-                                            <option value="canada">Bhajiwala</option>
-                                            <option value="usa">Other</option>
+                                            <option value="australia" style={{ fontSize: "14px" }}>Communication</option>
+                                            <option value="canada">Tutor</option>
+                                            <option value="usa">Singer</option>
                                         </select>
                                         <div id="emailHelp" className="form-text">We'll never share your Phone with anyone else.</div>
                                     </div>
