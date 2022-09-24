@@ -7,14 +7,19 @@ const courseSchema = new Schema({
         required: true
     },
 
-    url: {
+    description: {
         type: String,
         required: true
     },
 
-    id: {
+    link: {
         type: String,
         required: true
+    },
+
+    type_: {
+        type: String,
+        required:true
     }
 
 }, { timestamps: true })
