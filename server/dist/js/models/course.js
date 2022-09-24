@@ -6,11 +6,15 @@ const courseSchema = new mongoose_1.Schema({
         type: String,
         required: true
     },
-    url: {
+    description: {
         type: String,
         required: true
     },
-    id: {
+    link: {
+        type: String,
+        required: true
+    },
+    type_: {
         type: String,
         required: true
     }

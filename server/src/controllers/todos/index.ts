@@ -5,7 +5,9 @@ import Course from '../../models/course'
 const getCourses = async (req: Request, res: Response): Promise<void> => {
     try {
         const courses: ICourse[] = await Course.find()
-        res.status(200).json({ courses })
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({courses}));
+        //res.status(200).json({ courses })
     } catch (error) {
         throw error
     }
@@ -18,14 +20,15 @@ const addCourses = async (req: Request, res: Response): Promise<void> => {
         console.log(req.query)
         const course: ICourse = new Course({
             name: req.query.name,
-            url: req.query.url,
-            id: req.query.id,
+            description: req.query.description,
+            link: req.query.link,
+            type_: req.query.type_
         }) 
 
         const newTodo: ICourse = await course.save()
         const allTodos: ICourse[] = await Course.find()
 
-        res.status(201).json({ message: 'Todo added', todo: newTodo, todos: allTodos })
+        res.status(201).json({ message: 'Course added', todo: newTodo, todos: allTodos })
     } catch (error) {
         throw error
     }

@@ -17,7 +17,9 @@ const course_1 = __importDefault(require("../../models/course"));
 const getCourses = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const courses = yield course_1.default.find();
-        res.status(200).json({ courses });
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({ courses }));
+        //res.status(200).json({ courses })
     }
     catch (error) {
         throw error;
@@ -31,12 +33,13 @@ const addCourses = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         console.log(req.query);
         const course = new course_1.default({
             name: req.query.name,
-            url: req.query.url,
-            id: req.query.id,
+            description: req.query.description,
+            link: req.query.link,
+            type_: req.query.type_
         });
         const newTodo = yield course.save();
         const allTodos = yield course_1.default.find();
-        res.status(201).json({ message: 'Todo added', todo: newTodo, todos: allTodos });
+        res.status(201).json({ message: 'Course added', todo: newTodo, todos: allTodos });
     }
     catch (error) {
         throw error;
