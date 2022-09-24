@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../CSS/About.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import img from './womanc.jpg'
 function About() {
     useEffect(() => {
         AOS.init({ duration: 1000 })
@@ -29,7 +30,7 @@ function About() {
             </div>
           </div>
           <div className="image-sections"  data-aos="fade-right">
-           <img src="https://tse4.mm.bing.net/th?id=OIP.9qbZY-Nqj4UbNDFfScLSoAHaFe&pid=Api&P=0" alt="" srcset="" />
+           <img src={img} alt="" srcset="" />
           </div>
         </div>
       </div>

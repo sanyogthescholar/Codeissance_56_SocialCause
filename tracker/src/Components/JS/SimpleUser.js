@@ -9,21 +9,16 @@ import { BiMapPin } from 'react-icons/bi'
 import { NavLink } from 'react-router-dom'
 
 function SimpleUser() {
-
-
-
-
-
     return (
 
         <div className='main' style={{ marginTop: "30px" }}>
             <div className="container">
-                <header>Customer</header>
+                <header>User</header>
 
                 <form action="">
                     <div className="form first">
                         <div className="details personal">
-                            <span className="title">Personal Details</span>
+                            <span className="title" style={{textAlign:"center"}}>Personal Details</span>
                             <div className="fields">
 
                                 <div className="mb-3">

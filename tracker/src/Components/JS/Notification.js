@@ -15,7 +15,7 @@ export default function Notification() {
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Nikhil Adhare"
+          primary="Singer"
           secondary={
             <React.Fragment>
               <Typography
@@ -37,7 +37,7 @@ export default function Notification() {
           <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Nilesh Lab"
+          primary="Communication "
           secondary={
             <React.Fragment>
               <Typography
@@ -59,7 +59,7 @@ export default function Notification() {
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Ved Dhahale"
+          primary="Tour guide"
           secondary={
             <React.Fragment>
               <Typography
@@ -81,7 +81,7 @@ export default function Notification() {
           <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
         </ListItemAvatar>
         <ListItemText
-          primary="Pravin Paralkar"
+          primary="Tutor"
           secondary={
             <React.Fragment>
               <Typography
