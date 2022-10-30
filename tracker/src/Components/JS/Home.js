@@ -7,13 +7,14 @@ import About from './About'
 import Contact from './Contact'
 import Service from './Service'
 import Footer from './Footer'
+import NotablePeople from './NotablePeople'
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import {Link} from 'react-scroll'
 import Tooltip from '@mui/material/Tooltip';
-// import Navbar from './Navbar.js'
-import img from './womanc.jpg'
+    // import Navbar from './Navbar.js'
+    import img from './womanc.jpg'
 function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000 })
@@ -56,6 +57,7 @@ function Home() {
     </Link>
     </div>
     <Service/>
+    <NotablePeople/>
     <Contact/>
     <About/>
     <Footer/>

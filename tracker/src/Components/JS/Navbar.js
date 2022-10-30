@@ -29,6 +29,7 @@ const Navbar = () => {
                 <NavLink to="/" onClick={() => setIsOpen(!isOpen)}>Home <i><FcHome /></i> </NavLink>
                 <Link to="About" onClick={() => setIsOpen(!isOpen)}>About <i><FcAbout /></i></Link>
                 <Link to="Service" onClick={() => setIsOpen(!isOpen)}>Service <i><AiOutlineCustomerService /></i></Link>
+                <Link to="Notable" onClick={() => setIsOpen(!isOpen)}>Notable <i><FcAbout/></i></Link>
                 <Link to="Contact" onClick={() => setIsOpen(!isOpen)}>Contact <i><MdContactPage /></i></Link>
                 <NavLink to="/Resume" onClick={() => setIsOpen(!isOpen)}>Resume<i><BiLogIn /></i></NavLink>
                 <NavLink to="/Addcourse" onClick={() => setIsOpen(!isOpen)}>Addcourse<i><BiLogIn /></i></NavLink>

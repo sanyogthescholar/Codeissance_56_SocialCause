@@ -18,7 +18,7 @@ function SimpleUser() {
                 <form action="">
                     <div className="form first">
                         <div className="details personal">
-                            <span className="title" style={{textAlign:"center"}}>Personal Details</span>
+                            <span className="title">Personal Details</span>
                             <div className="fields">
 
                                 <div className="mb-3">
